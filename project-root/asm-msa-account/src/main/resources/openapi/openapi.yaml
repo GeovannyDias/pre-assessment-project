@@ -1,0 +1,294 @@
+openapi: 3.0.3
+info:
+  title: Account Service API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8083/api
+paths:
+  /accounts/customer/{customerId}:
+    get:
+      tags:
+        - List Accounts by CustomerId
+      summary: Listar cuentas por CustomerId
+      operationId: GetAccountsListByCustomerIdResponse
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Identificador único del cliente (UUID)
+      responses:
+        '200':
+          description: Lista de cuentas del cliente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AccountOutput'
+        '404':
+          description: Cliente no posee cuentas
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+  /account/create:
+    post:
+      tags:
+        - Create Account
+      summary: Crear cuenta
+      operationId: PostAccountCreateRequest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountInput'
+      responses:
+        '201':
+          description: Cuenta creada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountOutput'
+        '409':
+          description: Número de cuenta duplicado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+  /accounts:
+    get:
+      tags:
+        - List Accounts
+      summary: Listar cuentas
+      operationId: GetAccountsListResponse
+      responses:
+        '200':
+          description: Lista de cuentas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AccountOutput'
+  /accounts/{accountId}:
+    get:
+      tags:
+        - Get Account by AccountId
+      summary: Obtener cuenta por AccountId
+      operationId: GetAccountByAccountIdResponse
+      parameters:
+        - in: path
+          name: accountId
+          schema: { type: string, format: uuid }
+          required: true
+          description: Identificador único de la cuenta (UUID)
+      responses:
+        '200':
+          description: Cuenta encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountOutput'
+        '404':
+          description: Cuenta no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+    put:
+      tags:
+        - Update Account by AccountId
+      summary: Actualizar cuenta por AccountId
+      operationId: PutAccountUpdateByAccountIdRequest
+      parameters:
+        - in: path
+          name: accountId
+          schema: { type: string, format: uuid }
+          required: true
+          description: Identificador único de la cuenta (UUID)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/AccountInput' }
+      responses:
+        '200':
+          description: Cuenta actualizada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountOutput'
+        '404':
+          description: Cuenta no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+    patch:
+      tags:
+        - Partial Update Account by AccountId
+      summary: Actualizar parcialmente cuenta por AccountId
+      operationId: PatchAccountUpdateByAccountIdRequest
+      parameters:
+        - in: path
+          name: accountId
+          schema: { type: string, format: uuid }
+          required: true
+          description: Identificador único de la cuenta (UUID)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountPatchInput'
+      responses:
+        '200':
+          description: Cuenta actualizada parcialmente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountOutput'
+        '404':
+          description: Cuenta no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+    delete:
+      tags:
+        - Delete Account by AccountId
+      summary: Eliminar cuenta por AccountId
+      operationId: DeleteAccountByAccountIdRequest
+      parameters:
+        - in: path
+          name: accountId
+          schema: { type: string, format: uuid }
+          required: true
+          description: Identificador único de la cuenta (UUID)
+      responses:
+        '200':
+          description: Cuenta eliminada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+
+components:
+  schemas:
+    AccountInput:
+      type: object
+      required:
+        - accountNumber
+        - accountType
+        - customerId
+      properties:
+        accountNumber:
+          type: string
+          maxLength: 32
+          description: "Número de cuenta. Único. Máximo 32 caracteres."
+        accountType:
+          type: string
+          enum: [AHORRO, CORRIENTE]
+          description: "Tipo de cuenta. Puede ser AHORRO o CORRIENTE."
+        balance:
+          type: number
+          format: decimal
+          description: "Saldo actual de la cuenta."
+        status:
+          type: integer
+          enum: [0,1]
+          description: "Estado de la cuenta. 1=Activa, 0=Inactiva."
+        customerId:
+          type: string
+          format: uuid
+          description: "Identificador único del cliente (UUID)."
+
+    AccountOutput:
+      type: object
+      required:
+        - idAccount
+        - accountNumber
+        - accountType
+        - balance
+        - status
+        - customerId
+        - createdAt
+        - updatedAt
+      properties:
+        idAccount:
+          type: string
+          format: uuid
+          description: "Identificador único de la cuenta (UUID)."
+          example: "a1b2c3d4-e5f6-7890-abcd-1234567890ab"
+        accountNumber:
+          type: string
+          maxLength: 32
+          description: "Número de cuenta. Único. Máximo 32 caracteres."
+          example: "1234567890123456"
+        accountType:
+          type: string
+          enum: [AHORRO, CORRIENTE]
+          description: "Tipo de cuenta. Puede ser AHORRO o CORRIENTE."
+          example: "AHORRO"
+        balance:
+          type: number
+          format: decimal
+          description: "Saldo actual de la cuenta."
+          example: 1000.50
+        status:
+          type: integer
+          enum: [0,1]
+          description: "Estado de la cuenta. 1=Activa, 0=Inactiva."
+          example: 1
+        customerId:
+          type: string
+          format: uuid
+          description: "Identificador único del cliente (UUID)."
+          example: "b7e6a2e2-8c2e-4e2a-9e2a-123456789abc"
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: "Fecha de creación de la cuenta."
+          example: "2025-09-28T10:15:30Z"
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: "Fecha de última actualización de la cuenta."
+          example: "2025-09-28T12:00:00Z"
+
+    AccountPatchInput:
+      type: object
+      properties:
+        accountNumber:
+          type: string
+          maxLength: 32
+          description: "Número de cuenta. Único. Máximo 32 caracteres."
+        accountType:
+          type: string
+          enum: [AHORRO, CORRIENTE]
+          description: "Tipo de cuenta. Puede ser AHORRO o CORRIENTE."
+        balance:
+          type: number
+          format: decimal
+          description: "Saldo actual de la cuenta."
+        status:
+          type: integer
+          enum: [0,1]
+          description: "Estado de la cuenta. 1=Activa, 0=Inactiva."
+        customerId:
+          type: string
+          format: uuid
+          description: "Identificador único del cliente (UUID)."
+
+    MessageResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "La cuenta fue eliminada correctamente."

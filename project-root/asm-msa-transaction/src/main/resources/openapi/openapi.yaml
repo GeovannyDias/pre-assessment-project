@@ -1,0 +1,177 @@
+openapi: 3.0.3
+info:
+  title: Transaction Service API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8084/api
+paths:
+  /transaction/create:
+    post:
+      tags:
+        - Create Transaction
+      summary: Registrar transacción (CREDIT o DEBIT)
+      operationId: PostTransactionCreateRequest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionInput'
+      responses:
+        '201':
+          description: Transacción registrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionOutput'
+        '400':
+          description: Error en la transacción
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+  /transactions/filter:
+    get:
+      tags:
+        - List Transactions
+      summary: Listar transacciones
+      operationId: GetTransactionsListByAccoundIdAndDateResponse
+      parameters:
+        - in: query
+          name: accountId
+          schema:
+            type: string
+            format: uuid
+        - in: query
+          name: startDate
+          schema:
+            type: string
+            format: date
+        - in: query
+          name: endDate
+          schema:
+            type: string
+            format: date
+      responses:
+        '200':
+          description: Lista de transacciones
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TransactionOutput'
+  /transaction/{transactionId}:
+    get:
+      tags:
+        - Get Transaction by TransactionId
+      summary: Obtener transacción por TransactionId
+      operationId: GetTransactionByTransactionIdResponse
+      parameters:
+        - in: path
+          name: transactionId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: Identificador único de la transacción (UUID)
+      responses:
+        '200':
+          description: Transacción encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionOutput'
+        '404':
+          description: Transacción no encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+
+components:
+  schemas:
+    TransactionInput:
+      type: object
+      required:
+        - accountId
+        - type
+        - amount
+      properties:
+        accountId:
+          type: string
+          format: uuid
+          description: "Identificador único de la cuenta (UUID)."
+        type:
+          type: string
+          enum: [CREDIT, DEBIT]
+          description: "Tipo de transacción. Puede ser CREDIT o DEBIT."
+        amount:
+          type: number
+          format: decimal
+          description: "Monto de la transacción."
+        description:
+          type: string
+          maxLength: 150
+          description: "Descripción de la transacción. Máximo 150 caracteres."
+
+    TransactionOutput:
+      type: object
+      required:
+        - idTransaction
+        - accountId
+        - type
+        - amount
+        - balanceBefore
+        - balanceAfter
+        - description
+        - createdAt
+      properties:
+        idTransaction:
+          type: string
+          format: uuid
+          description: "Identificador único de la transacción (UUID)."
+          example: "e1f2g3h4-i5j6-7890-klmn-1234567890ab"
+        accountId:
+          type: string
+          format: uuid
+          description: "Identificador único de la cuenta (UUID)."
+          example: "a1b2c3d4-e5f6-7890-abcd-1234567890ab"
+        type:
+          type: string
+          enum: [CREDIT, DEBIT]
+          description: "Tipo de transacción. Puede ser CREDIT o DEBIT."
+          example: "CREDIT"
+        amount:
+          type: number
+          format: decimal
+          description: "Monto de la transacción."
+          example: 500.00
+        balanceBefore:
+          type: number
+          format: decimal
+          description: "Saldo antes de la transacción."
+          example: 1000.00
+        balanceAfter:
+          type: number
+          format: decimal
+          description: "Saldo después de la transacción."
+          example: 1500.00
+        description:
+          type: string
+          maxLength: 150
+          description: "Descripción de la transacción. Máximo 150 caracteres."
+          example: "Depósito en efectivo"
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: "Fecha de creación de la transacción."
+          example: "2025-09-28T10:15:30Z"
+
+    MessageResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "La transacción fue procesada correctamente."

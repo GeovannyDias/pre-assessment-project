@@ -1,0 +1,14 @@
+package com.company.asm.transaction.service.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class MessageResponseDto {
+    private String message;
+}

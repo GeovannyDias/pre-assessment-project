@@ -1,0 +1,254 @@
+openapi: 3.0.3
+info:
+  title: Identity Service API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8086/api
+paths:
+  /user/create:
+    post:
+      tags:
+        - Create User
+      summary: Crear usuario
+      operationId: PostUserCreateRequest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserInput'
+      responses:
+        '201':
+          description: Usuario creado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOutput'
+  /users:
+    get:
+      tags:
+        - List Users
+      summary: Listar usuarios
+      operationId: GetUsersListResponse
+      responses:
+        '200':
+          description: Lista de usuarios
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserOutput'
+  /user/{userId}:
+    get:
+      tags:
+        - Get User by userId
+      summary: Obtener usuario
+      operationId: GetUserByIdResponse
+      parameters:
+        - in: path
+          name: userId
+          schema: { type: string, format: uuid }
+          required: true
+      responses:
+        '200':
+          description: Usuario encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOutput'
+    patch:
+      tags:
+        - Partial Update User by userId
+      summary: Actualizar parcialmente usuario
+      operationId: PatchUserUpdateByIdRequest
+      parameters:
+        - in: path
+          name: userId
+          schema: { type: string, format: uuid }
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserPatchInput'
+      responses:
+        '200':
+          description: Usuario actualizado parcialmente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserOutput'
+        '404':
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+    delete:
+      tags:
+        - Delete User by userId
+      summary: Eliminar usuario
+      operationId: DeleteUserByIdRequest
+      parameters:
+        - in: path
+          name: userId
+          schema: { type: string, format: uuid }
+          required: true
+      responses:
+        '200':
+          description: Usuario eliminado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MessageResponse'
+  /identity/login:
+    post:
+      tags:
+        - Login
+      summary: Autenticación usuario
+      operationId: PostLoginRequest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username: { type: string }
+                password: { type: string }
+      responses:
+        '200':
+          description: JWT generado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponse'
+
+components:
+  schemas:
+    UserInput:
+      type: object
+      required:
+        - username
+        - passwordHash
+      properties:
+        username:
+          type: string
+          maxLength: 20
+          description: "Nombre de usuario. Único. Máximo 20 caracteres."
+        passwordHash:
+          type: string
+          maxLength: 50
+          description: "Hash de la contraseña. Máximo 50 caracteres."
+        roles:
+          type: array
+          items:
+            type: string
+          description: "Roles del usuario. Ejemplo: ['USER','ADMIN']"
+        customerId:
+          type: string
+          format: uuid
+          description: "Identificador único del cliente (UUID). Puede ser nulo."
+
+    UserOutput:
+      type: object
+      required:
+        - idUser
+        - username
+        - passwordHash
+        - roles
+        - customerId
+        - createdAt
+        - updatedAt
+      properties:
+        idUser:
+          type: string
+          format: uuid
+          description: "Identificador único del usuario (UUID)."
+          example: "c1d2e3f4-5678-90ab-cdef-1234567890ab"
+        username:
+          type: string
+          maxLength: 20
+          description: "Nombre de usuario. Único. Máximo 20 caracteres."
+          example: "usuario123"
+        passwordHash:
+          type: string
+          maxLength: 50
+          description: "Hash de la contraseña. Máximo 50 caracteres."
+          example: "$2a$10$abcdef..."
+        roles:
+          type: array
+          items:
+            type: string
+          description: "Roles del usuario. Ejemplo: ['USER','ADMIN']"
+          example: ["USER", "ADMIN"]
+        customerId:
+          type: string
+          format: uuid
+          description: "Identificador único del cliente (UUID). Puede ser nulo."
+          example: "b7e6a2e2-8c2e-4e2a-9e2a-123456789abc"
+        createdAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: "Fecha de creación del usuario."
+          example: "2025-09-28T10:15:30Z"
+        updatedAt:
+          type: string
+          format: date-time
+          readOnly: true
+          description: "Fecha de última actualización del usuario."
+          example: "2025-09-28T12:00:00Z"
+
+    UserPatchInput:
+      type: object
+      properties:
+        username:
+          type: string
+          maxLength: 20
+          description: "Nombre de usuario. Único. Máximo 20 caracteres."
+        passwordHash:
+          type: string
+          maxLength: 50
+          description: "Hash de la contraseña. Máximo 50 caracteres."
+        roles:
+          type: array
+          items:
+            type: string
+          description: "Roles del usuario. Ejemplo: ['USER','ADMIN']"
+        customerId:
+          type: string
+          format: uuid
+          description: "Identificador único del cliente (UUID). Puede ser nulo."
+
+    MessageResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "El usuario fue eliminado correctamente."
+          
+    LoginInput:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          maxLength: 20
+          description: "Nombre de usuario para autenticación."
+        password:
+          type: string
+          maxLength: 50
+          description: "Contraseña para autenticación."
+
+    LoginResponse:
+      type: object
+      properties:
+        token:
+          type: string
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+
