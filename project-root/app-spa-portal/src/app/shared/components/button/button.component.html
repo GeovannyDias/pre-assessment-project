@@ -1,0 +1,13 @@
+<button [attr.type]="type" [class]="['app-btn', 'app-btn-' + variant, 'app-btn-' + size]" [disabled]="disabled"
+    (click)="onClick($event)">
+
+    @if (icon) {
+        <i [class]="icon" class="app-btn-icon"></i>
+    }
+
+    @if (label) {
+        {{ label }}
+    } @else {
+        <ng-content></ng-content>
+    }
+</button>

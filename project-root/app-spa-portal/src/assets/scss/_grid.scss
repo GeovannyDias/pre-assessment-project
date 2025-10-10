@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+// Row
+.grid {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    gap: ($unit * 2); // = 1rem = 16px
+    padding: $unit 0; // = 0.5rem = 8px
+}
+
+// Cols
+@for $i from 1 through $grid-columns {
+    .grid-#{$i} {
+        grid-column: span $i;
+    }
+}
+
+// Cols - Responsive - Grid
+
+// Extra small (xs)
+@media (min-width: 576px) {
+    @for $i from 1 through $grid-columns {
+        .grid-xs-#{$i} {
+            grid-column: span $i;
+        }
+    }
+}
+
+// Medium (md)
+@media (min-width: 768px) {
+    @for $i from 1 through $grid-columns {
+        .grid-md-#{$i} {
+            grid-column: span $i;
+        }
+    }
+}
+
+// Large (lg)
+@media (min-width: 992px) {
+    @for $i from 1 through $grid-columns {
+        .grid-lg-#{$i} {
+            grid-column: span $i;
+        }
+    }
+}
+
+// Extra large (xl)
+@media(min-width: 1200px) {
+    @for $i from 1 through $grid-columns {
+        .grid-xl-#{$i} {
+            grid-column: span $i;
+        }
+    }
+}

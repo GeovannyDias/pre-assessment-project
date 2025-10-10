@@ -1,0 +1,56 @@
+@use '../../../../../assets/scss/variables' as *;
+
+.report-page {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+}
+
+.search-container {
+    margin: 16px 0;
+    background-color: #ffffff;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.no-data {
+    padding: 24px;
+    text-align: center;
+    color: #777;
+}
+
+
+
+.error {
+    font-size: 10px;
+    font-weight: bold;
+    color: $color-danger;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+
+    button:nth-child(1) {
+        margin-right: 1rem;
+    }
+}

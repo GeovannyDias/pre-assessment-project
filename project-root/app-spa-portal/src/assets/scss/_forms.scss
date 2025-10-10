@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+.form-group {
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid $border-form;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+
+    &:focus {
+        outline: 0;
+        border: $border-form-focus;
+        box-shadow: $box-shadow-form-focus;
+    }
+
+    &::placeholder {
+        color: $color-medium;
+    }
+}

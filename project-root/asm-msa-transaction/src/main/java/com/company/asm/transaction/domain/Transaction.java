@@ -55,4 +55,9 @@ public class Transaction {
             idTransaction = UUID.randomUUID();
         }
     }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ACCOUNT_ID", insertable = false, updatable = false)
+    private Account account;
+
 }

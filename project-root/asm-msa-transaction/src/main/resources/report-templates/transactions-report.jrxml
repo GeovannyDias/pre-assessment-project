@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+             name="Reporte_BancoEC" 
+             language="java" 
+             pageWidth="595" 
+             pageHeight="842" 
+             columnWidth="555" 
+             leftMargin="20" 
+             rightMargin="20" 
+             topMargin="20" 
+             bottomMargin="20">
+
+    <style name="Default" isDefault="true" fontName="SansSerif" fontSize="10" isBold="false" pdfFontName="Helvetica"/>
+    <style name="Titulo" fontName="SansSerif" fontSize="16" isBold="true" pdfFontName="Helvetica-Bold"/>
+    <style name="Cabecera" fontName="SansSerif" fontSize="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+    <style name="Campo" fontName="SansSerif" fontSize="10" isBold="false" pdfFontName="Helvetica"/>
+
+    <parameter name="customerName" class="java.lang.String"/>
+    <parameter name="accountNumber" class="java.lang.String"/>
+    <parameter name="accountType" class="java.lang.String"/>
+    <parameter name="accountStatus" class="java.lang.String"/>
+
+    <field name="date" class="java.lang.String"/>
+    <field name="balanceBefore" class="java.lang.String"/>
+    <field name="accountStatus" class="java.lang.String"/>
+    <field name="amount" class="java.lang.String"/>
+    <field name="balanceAfter" class="java.lang.String"/>
+
+    <title>
+        <band height="90">
+            <staticText>
+                <reportElement style="Titulo" x="0" y="0" width="555" height="25"/>
+                <text><![CDATA[Reporte de Movimientos Bancarios]]></text>
+            </staticText>
+
+            <line>
+                <reportElement x="0" y="30" width="555" height="1"/>
+            </line>
+
+            <staticText>
+                <reportElement style="Cabecera" x="0" y="40" width="100" height="20"/>
+                <text><![CDATA[Cliente:]]></text>
+            </staticText>
+
+            <textField>
+                <reportElement style="Campo" x="100" y="40" width="200" height="20"/>
+                <textFieldExpression><![CDATA[$P{customerName}]]></textFieldExpression>
+            </textField>
+
+            <staticText>
+                <reportElement style="Cabecera" x="320" y="40" width="100" height="20"/>
+                <text><![CDATA[N° Cuenta:]]></text>
+            </staticText>
+
+            <textField>
+                <reportElement style="Campo" x="420" y="40" width="135" height="20"/>
+                <textFieldExpression><![CDATA[$P{accountNumber}]]></textFieldExpression>
+            </textField>
+
+            <staticText>
+                <reportElement style="Cabecera" x="0" y="65" width="100" height="20"/>
+                <text><![CDATA[Tipo Cuenta:]]></text>
+            </staticText>
+
+            <textField>
+                <reportElement style="Campo" x="100" y="65" width="120" height="20"/>
+                <textFieldExpression><![CDATA[$P{accountType}]]></textFieldExpression>
+            </textField>
+
+            <staticText>
+                <reportElement style="Cabecera" x="320" y="65" width="100" height="20"/>
+                <text><![CDATA[Estado:]]></text>
+            </staticText>
+
+            <textField>
+                <reportElement style="Campo" x="420" y="65" width="135" height="20"/>
+                <textFieldExpression><![CDATA[$P{accountStatus}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <staticText>
+                <reportElement style="Cabecera" x="0" y="0" width="80" height="20"/>
+                <text><![CDATA[Fecha]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement style="Cabecera" x="80" y="0" width="100" height="20"/>
+                <text><![CDATA[Saldo Inicial]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement style="Cabecera" x="180" y="0" width="90" height="20"/>
+                <text><![CDATA[Estado]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement style="Cabecera" x="270" y="0" width="120" height="20"/>
+                <text><![CDATA[Movimiento]]></text>
+            </staticText>
+
+            <staticText>
+                <reportElement style="Cabecera" x="390" y="0" width="165" height="20"/>
+                <text><![CDATA[Saldo Disponible]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField>
+                <reportElement style="Campo" x="0" y="0" width="80" height="20"/>
+                <textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement style="Campo" x="80" y="0" width="100" height="20"/>
+                <textFieldExpression><![CDATA[$F{balanceBefore}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement style="Campo" x="180" y="0" width="90" height="20"/>
+                <textFieldExpression><![CDATA[$F{accountStatus}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement style="Campo" x="270" y="0" width="120" height="20"/>
+                <textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+            </textField>
+
+            <textField>
+                <reportElement style="Campo" x="390" y="0" width="165" height="20"/>
+                <textFieldExpression><![CDATA[$F{balanceAfter}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <pageFooter>
+        <band height="20">
+            <staticText>
+                <reportElement style="Campo" x="0" y="0" width="555" height="20"/>
+                <text><![CDATA[© Banco EC - Reporte generado automáticamente.]]></text>
+            </staticText>
+        </band>
+    </pageFooter>
+
+</jasperReport>

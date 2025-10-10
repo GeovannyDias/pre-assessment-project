@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Banco - Administración</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FACC15", // yellow-400
+                        "background-light": "#F9FAFB", // gray-50
+                        "background-dark": "#111827", // gray-900
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1F2937", // gray-800
+                        "text-light-primary": "#111827", // gray-900
+                        "text-dark-primary": "#F9FAFB", // gray-50
+                        "text-light-secondary": "#6B7280", // gray-500
+                        "text-dark-secondary": "#9CA3AF", // gray-400
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .material-icons {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light-primary dark:text-dark-primary">
+    <div class="flex h-screen">
+        <aside
+            class="w-64 bg-surface-light dark:bg-surface-dark border-r border-gray-200 dark:border-gray-700 flex flex-col">
+            <div class="h-16 flex items-center justify-center border-b border-gray-200 dark:border-gray-700">
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-2">
+                <a class="flex items-center px-4 py-2 text-sm font-medium bg-gray-100 dark:bg-gray-700 rounded-lg"
+                    href="#">Clientes</a>
+                <a class="flex items-center px-4 py-2 text-sm font-medium text-text-light-secondary dark:text-dark-secondary hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                    href="#">Cuentas</a>
+                <a class="flex items-center px-4 py-2 text-sm font-medium text-text-light-secondary dark:text-dark-secondary hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                    href="#">Movimientos</a>
+                <a class="flex items-center px-4 py-2 text-sm font-medium text-text-light-secondary dark:text-dark-secondary hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
+                    href="#">Reportes</a>
+            </nav>
+        </aside>
+        <div class="flex-1 flex flex-col">
+            <header
+                class="h-16 bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                <div class="flex items-center space-x-2">
+                    <span class="material-icons text-primary">account_balance</span>
+                    <span class="text-xl font-bold tracking-wider">BANCO</span>
+                </div>
+            </header>
+            <main class="flex-1 p-8 overflow-y-auto">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h1 class="text-3xl font-bold">Clientes</h1>
+                        <button
+                            class="bg-primary hover:bg-yellow-500 text-gray-900 font-bold py-2 px-4 rounded-lg flex items-center space-x-2">
+                            <span class="material-icons">add</span>
+                            <span>Nuevo</span>
+                        </button>
+                    </div>
+                    <div class="mb-6">
+                        <div class="relative">
+                            <span
+                                class="material-icons absolute inset-y-0 left-0 flex items-center pl-3 text-text-light-secondary dark:text-dark-secondary">search</span>
+                            <input
+                                class="w-full max-w-sm pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 bg-surface-light dark:bg-surface-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="Buscar" type="text" />
+                        </div>
+                    </div>
+                    <div class="bg-surface-light dark:bg-surface-dark rounded-lg shadow overflow-hidden">
+                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-text-light-secondary dark:text-dark-secondary uppercase tracking-wider"
+                                        scope="col">Nombre</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-text-light-secondary dark:text-dark-secondary uppercase tracking-wider"
+                                        scope="col">Cédula</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-text-light-secondary dark:text-dark-secondary uppercase tracking-wider"
+                                        scope="col">Teléfono</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-text-light-secondary dark:text-dark-secondary uppercase tracking-wider"
+                                        scope="col">Estado</th>
+                                    <th class="relative px-6 py-3" scope="col">
+                                        <span class="sr-only">Acciones</span>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Jose Lema</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">1722896578</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">098254785</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Activo</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <div class="flex items-center justify-end space-x-4">
+                                            <button
+                                                class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300">
+                                                <span class="material-icons">edit</span>
+                                            </button>
+                                            <button
+                                                class="text-red-600 dark:text-red-400 hover:text-red-900 dark:hover:text-red-300">
+                                                <span class="material-icons">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Marianela Montalvo</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">1722896579</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">097548526</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Activo</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <div class="flex items-center justify-end space-x-4">
+                                            <button
+                                                class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300">
+                                                <span class="material-icons">edit</span>
+                                            </button>
+                                            <button
+                                                class="text-red-600 dark:text-red-400 hover:text-red-900 dark:hover:text-red-300">
+                                                <span class="material-icons">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">Juan Osorio</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">1722896580</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">099524587</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Inactivo</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <div class="flex items-center justify-end space-x-4">
+                                            <button
+                                                class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300">
+                                                <span class="material-icons">edit</span>
+                                            </button>
+                                            <button
+                                                class="text-red-600 dark:text-red-400 hover:text-red-900 dark:hover:text-red-300">
+                                                <span class="material-icons">delete</span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>

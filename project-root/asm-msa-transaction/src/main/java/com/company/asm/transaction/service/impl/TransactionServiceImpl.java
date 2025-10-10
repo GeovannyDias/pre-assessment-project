@@ -92,4 +92,9 @@ public class TransactionServiceImpl implements TransactionService {
                 "La descripción no puede exceder los 150 caracteres");
         }
     }
+
+    @Override
+    public List<TransactionOutput> getAllTransactions() {
+        return transactionMapper.toDtoList(transactionRepository.findAll());
+    }
 }

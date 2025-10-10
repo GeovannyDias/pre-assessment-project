@@ -1,0 +1,92 @@
+/* sidebar.component.scss o sidebar.component.css */
+
+
+/* --- Wrapper Principal del Sidebar --- */
+.sidebar-wrapper {
+    /* Fija la barra lateral al borde izquierdo */
+    position: relative;
+    top: 0;
+    left: 0;
+    height: calc(100vh - 80px);
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-color);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    /* Asegura que esté por encima del contenido */
+    // z-index: 1000
+
+    /* Transición para efectos de colapso futuros */
+    transition: width 0.3s ease-in-out;
+
+    /* Usar Flexbox para el contenido interno (logo y nav) */
+    display: flex;
+    flex-direction: column;
+    // background-color: var(--background-color)
+}
+
+/* --- Estilo del Logo/Título --- */
+.logo {
+    padding: 10px 20px 30px 20px;
+    text-align: center;
+
+    span {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+/* --- Contenedor de la Navegación --- */
+.nav-list {
+    flex-grow: 1;
+    /* Permite que la lista ocupe el espacio restante */
+    list-style: none;
+    /* Quita los puntos de la lista si se usa <ul> */
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Ítems Individuales de Navegación (Enlaces <a>) --- */
+.nav-item {
+    display: flex;
+    /* Alinea icono y texto */
+    align-items: center;
+    gap: 15px;
+    /* Espacio entre el ícono y el texto */
+    padding: 12px 20px;
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+
+    transition: background-color 0.2s, color 0.2s;
+
+    /* Asegúrate de que el cursor cambie al pasar por encima */
+    cursor: pointer;
+}
+
+/* Estilo al pasar el ratón (Hover) */
+.nav-item:hover {
+    background-color: var(--hover-color);
+    color: #2c3e50;
+}
+
+/* Estilo para el ítem Activo (usando la directiva routerLinkActive="active") */
+.nav-item.active {
+    background-color: var(--active-color);
+    color: #2c3e50;
+    /* Borde de resalte */
+    border-left: 5px solid #facc16;
+    /* Compensa el ancho del borde */
+    padding-left: 15px;
+}
+
+/* Estilo para la Etiqueta/Texto */
+.nav-item .label {
+    /* Asegura que el texto no se corte si el sidebar se encoge */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

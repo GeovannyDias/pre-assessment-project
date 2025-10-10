@@ -1,0 +1,58 @@
+<div class="report-page">
+    <div class="header">
+        <h1>Reportes</h1>
+    </div>
+    <div class="search-container">
+        <form [formGroup]="formTransaction" class="form-group">
+            <div class="grid">
+                <div class="grid-12 grid-xs-6">
+                    <app-select label="Cliente:" placeholder="Seleccione Cliente" (input)="onCustomerSelected($event)"
+                        [required]="true" [data]="customerList" formControlName="customerId">
+                    </app-select>
+                    @if ((customerId.dirty || customerId.touched) && customerId.errors?.['required']) {
+                    <span class="error"> * Field required </span>
+                    }
+                </div>
+                <div class="grid-12 grid-xs-6">
+                    <app-select label="Cuenta:" placeholder="Seleccione Cuenta" (input)="onAccountSelected($event)"
+                        [required]="true" [data]="accountList" formControlName="accountId">
+                    </app-select>
+                    @if ((accountId.dirty || accountId.touched) && accountId.errors?.['required']) {
+                    <span class="error"> * Field required </span>
+                    }
+                </div>
+            </div>
+            <div class="grid">
+                <div class="grid-12 grid-xs-6">
+                    <app-input label="Fecha Incio:" placeholder="Fecha Incio" [required]="true" [type]="'date'"
+                        formControlName="startDate">
+                    </app-input>
+                    @if ((startDate.dirty || startDate.touched) && startDate.errors?.['required']) {
+                    <span class="error"> * Field required </span>
+                    }
+                </div>
+                <div class="grid-12 grid-xs-6">
+                    <app-input label="Fecha Fin:" placeholder="Fecha Fin" [required]="true" [type]="'date'"
+                        formControlName="endDate">
+                    </app-input>
+                    @if ((endDate.dirty || endDate.touched) && endDate.errors?.['required']) {
+                    <span class="error"> * Field required </span>
+                    }
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <button (click)="onSubmit()" class="btn btn-primary">Consultar</button>
+            </div>
+        </form>
+        <app-button [label]="'Resetear'" [variant]="'secondary'" [size]="'md'" (clicked)="resetReport()"></app-button>
+        <app-button [label]="'Generar Reporte'" [variant]="'primary'" [size]="'md'" (clicked)="generateReport()"></app-button>
+    </div>
+    <div class="table-container">
+        @if (transactions.length > 0) {
+        <app-table [columns]="columns" [data]="transactions"></app-table>
+        } @else {
+        <p class="no-data">No existe datos para mostrar.</p>
+        }
+    </div>
+</div>

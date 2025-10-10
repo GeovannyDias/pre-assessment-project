@@ -11,4 +11,5 @@ public interface TransactionService {
     TransactionOutput createTransaction(TransactionInput transactionInput);
     TransactionOutput getTransactionById(UUID transactionId);
     List<TransactionOutput> getTransactionsByFilter(UUID accountId, LocalDate startDate, LocalDate endDate);
+    List<TransactionOutput> getAllTransactions();
 }

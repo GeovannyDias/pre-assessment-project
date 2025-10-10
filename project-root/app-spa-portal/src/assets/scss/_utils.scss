@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+/******************************* SPACING SECTION *******************************/
+
+/** margin with map **/
+
+.m-auto {
+    margin: 0 auto;
+}
+
+@each $key, $value in $spacers {
+    .m-#{$key} {
+        margin: $value;
+    }
+}
+
+/** padding with map **/
+
+.p-auto {
+    padding: 0 auto;
+}
+
+@each $key, $value in $spacers {
+    .p-#{$key} {
+        padding: $value;
+    }
+}
+
+/** width **/
+
+
+
+
+
+
+
+
+
+// With Maps
+// https://sass-lang.com/documentation/at-rules/control/each
+// Maps
+// https://sass-lang.com/documentation/values/maps

@@ -1,0 +1,52 @@
+@use '../../../../assets/scss/variables' as *;
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+
+    .filter-input {
+        width: 100%;
+        padding: 0.4rem 0.8rem;
+        margin-bottom: 0.5rem;
+        border: 1px solid $border-form;
+        border-radius: 5px;
+    }
+
+
+    select {
+        width: 100%;
+        margin: 5px 0;
+        border: 1px solid $border-form;
+        background-color: #ffffff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+
+        &:focus {
+            outline: 0;
+            border: $border-form-focus;
+            box-shadow: $box-shadow-form-focus;
+        }
+
+        &::placeholder {
+            color: $color-medium;
+        }
+    }
+
+
+    select:required:invalid {
+        color: $color-medium; // placeholder color
+    }
+
+    option[value=""][disabled] {
+        display: none;
+    }
+
+    option {
+        color: $color-dark;
+    }
+
+    // FORM CONTROL
+    .ng-invalid.ng-touched {
+        border: 1px solid $color-danger;
+    }
+}

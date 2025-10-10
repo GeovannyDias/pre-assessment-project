@@ -1,0 +1,10 @@
+.app-container {
+  display: flex;
+  height: calc(100vh - 80px); // si navbar mide 60px
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}

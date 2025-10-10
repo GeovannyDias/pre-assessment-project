@@ -1,0 +1,16 @@
+@if (isOpen) {
+<div class="modal-backdrop" (click)="handleBackdropClick()" (keydown.enter)="handleBackdropClick()"
+    (keydown.space)="handleBackdropClick()" aria-label="Cerrar modal"></div>
+}
+
+@if (isOpen) {
+<div class="modal">
+    <div class="modal-header">
+        <h2>{{ title }}</h2>
+        <button class="close-button" (click)="closeModal()">x</button>
+    </div>
+    <div class="modal-body">
+        <ng-content></ng-content>
+    </div>
+</div>
+}

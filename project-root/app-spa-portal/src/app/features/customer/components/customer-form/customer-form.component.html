@@ -1,0 +1,56 @@
+<div class="container">
+    <form [formGroup]="formCustomer" class="form-group">
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Nombre:" placeholder="Nombre" formControlName="firstName" [required]="true" [maxlength]="50">
+                </app-input>
+                @if ((firstName.dirty || firstName.touched) && firstName.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+
+            </div>
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Apellido:" placeholder="Apellido" formControlName="lastName" [required]="true" [maxlength]="50">
+                </app-input>
+                @if ((lastName.dirty || lastName.touched) && lastName.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Identificación:" placeholder="Cédula o RUC" formControlName="identification"
+                    [required]="true" [minlength]="10" [maxlength]="13">
+                </app-input>
+                @if ((identification.dirty || identification.touched) && identification.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Dirección:" placeholder="Dirección" formControlName="address" [required]="true" [maxlength]="100">
+                </app-input>
+                @if ((address.dirty || address.touched) && address.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Teléfono:" placeholder="Teléfono" formControlName="phone" [required]="true" [maxlength]="10">
+                </app-input>
+                @if ((phone.dirty || phone.touched) && phone.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+        </div>
+
+        <br />
+        <div class="btn-container">
+            <button (click)="onSubmit()" class="btn btn-primary">Aceptar</button>
+            <button (click)="onCancel()" class="btn btn-secondary">Cancelar</button>
+        </div>
+        <br>
+    </form>
+</div>

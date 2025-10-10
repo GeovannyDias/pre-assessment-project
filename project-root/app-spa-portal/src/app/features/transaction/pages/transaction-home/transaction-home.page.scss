@@ -1,0 +1,37 @@
+.transaction-page {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+}
+
+.search-container {
+    margin: 16px 0;
+    background-color: #ffffff;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 8px 0;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.no-data {
+    padding: 24px;
+    text-align: center;
+    color: #777;
+}

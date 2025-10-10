@@ -1,0 +1,6 @@
+<div class="input-wrapper">
+    <label for="idInput">{{label}}</label>
+    <input [type]="type" [(ngModel)]="field" (ngModelChange)="handleChange($event)" (blur)="onTouchedFn()"
+        [disabled]="isDisabled" [placeholder]="placeholder" [required]="required" [minlength]="minlength"
+        [maxlength]="maxlength" />
+</div>

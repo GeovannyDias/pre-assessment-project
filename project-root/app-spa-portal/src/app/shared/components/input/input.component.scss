@@ -1,0 +1,33 @@
+@use '../../../../assets/scss/variables' as *;
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+
+    input {
+        width: 100%;
+        margin: 5px 0;
+        border: 1px solid $border-form;
+        background-color: #ffffff;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.875rem; // 14px = 0.875rem (1rem = 16px) | 12px = 0.75rem | 10px = 0.625rem | 8px = 0.5rem
+        color: #333;
+        outline: none;
+
+        &:focus {
+            outline: 0;
+            border: $border-form-focus;
+            box-shadow: $box-shadow-form-focus;
+        }
+
+        &::placeholder {
+            color: $color-medium;
+        }
+    }
+
+    // FORM CONTROL
+    .ng-invalid.ng-touched {
+        border: 1px solid $color-danger;
+    }
+}

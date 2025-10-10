@@ -1,0 +1,10 @@
+<aside class="sidebar-wrapper">
+    <div class="logo">
+        <span>Banco EC</span>
+    </div>
+    <nav class="nav-list">
+        <a *ngFor="let item of navItems" [routerLink]="item.route" routerLinkActive="active" class="nav-item">
+            <span class="label">{{ item.label }}</span>
+        </a>
+    </nav>
+</aside>

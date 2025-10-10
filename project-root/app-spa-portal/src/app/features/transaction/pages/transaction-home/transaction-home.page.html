@@ -1,0 +1,23 @@
+<div class="transaction-page">
+    <div class="header">
+        <h1>Movimientos</h1>
+    </div>
+    <div class="search-container">
+        <app-input [placeholder]="'Buscar'" (input)="onSearchInput($event)"></app-input>
+        <app-button [label]="'+ Nuevo'" [variant]="'primary'" [size]="'md'" (clicked)="openModal()"></app-button>
+    </div>
+    <div class="table-container">
+        @if (filteredTransactions.length > 0) {
+        <app-table [columns]="columns" [data]="filteredTransactions"></app-table>
+        } @else {
+        <p class="no-data">No existe datos para mostrar.</p>
+        }
+    </div>
+</div>
+
+@if (isModalOpen) {
+<app-modal [title]="'Nuevo Movimiento'" [isOpen]="isModalOpen" (closed)="onModalClosed()" (opened)="onModalOpened()"
+    [closeOnBackdropClick]="false">
+    <app-transaction-form (submitted)="onFormSubmitted($event)"></app-transaction-form>
+</app-modal>
+}

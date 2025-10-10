@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            @for (column of visibleColumns; track $index) {
+            <th [style.width]="column.width || 'auto'">
+                {{ column.label }}
+            </th>
+            }
+            @if (showActionsColumn) { <th [style.width]="actionColumnWidth"></th> }
+        </tr>
+    </thead>
+    <tbody>
+        @for (row of data; track $index) {
+        <tr>
+            @for (column of visibleColumns; track $index) {
+            <td>
+                {{ column.formatFn ? column.formatFn(row[column.key], row) : row[column.key] }}
+            </td>
+            }
+            @if (showActionsColumn) {
+            <td>
+                @if (showSelectButon) { <button (click)="onSelectRow(row)" aria-label="Seleccionar fila">✅</button> }
+                @if (showEditButon) { <button (click)="onEditRow(row)" aria-label="Editar fila">✏️</button> }
+                @if (showDeleteButon) { <button (click)="onDeleteRow(row)" aria-label="Eliminar fila">❌</button> }
+            </td>
+            }
+
+        </tr>
+        }
+    </tbody>

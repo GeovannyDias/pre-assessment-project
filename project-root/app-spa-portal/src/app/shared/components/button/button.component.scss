@@ -1,0 +1,70 @@
+.app-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    padding: 0.5rem 1.5rem;
+    outline: none;
+
+    &.app-btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    &.app-btn-md {
+        padding: 0.56rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    &.app-btn-lg {
+        padding: 0.75rem 1.75rem;
+        font-size: 1rem;
+    }
+
+    &.app-btn-primary {
+        background-color: #ffdd00;
+        color: #0f265c;
+    }
+
+    &.app-btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    &.app-btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    &.app-btn-success {
+        background-color: #28a745;
+        color: white;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .app-btn-icon {
+        margin-right: 0.5rem;
+    }
+
+
+    &:hover {
+        background-color: #ffd100;
+    }
+
+    &:active {
+        background-color: #b7950b;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 4px rgba(241, 196, 15, 0.6);
+    }
+}

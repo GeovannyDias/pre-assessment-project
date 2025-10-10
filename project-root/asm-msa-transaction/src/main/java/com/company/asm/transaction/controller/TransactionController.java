@@ -34,4 +34,9 @@ public class TransactionController implements CreateTransactionApi, GetTransacti
     public ResponseEntity<List<TransactionOutput>> getTransactionsListByAccoundIdAndDateResponse(UUID accountId, LocalDate startDate, LocalDate endDate) {
         return ResponseEntity.ok(transactionService.getTransactionsByFilter(accountId, startDate, endDate));
     }
+
+    @Override
+    public ResponseEntity<List<TransactionOutput>> getTransactionsListResponse() {
+        return ResponseEntity.ok(transactionService.getAllTransactions());
+    }
 }

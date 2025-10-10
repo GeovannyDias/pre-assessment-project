@@ -1,0 +1,53 @@
+<div class="container">
+    <form [formGroup]="formAccount" class="form-group">
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-select label="Cliente:" placeholder="Seleccione Cliente" formControlName="customerId"
+                    [required]="true" [data]="customerList">
+                </app-select>
+                @if ((customerId.dirty || customerId.touched) && customerId.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+            <div class="grid-12 grid-xs-6">
+                <app-input label="No. Cuenta:" placeholder="No. Cuenta" formControlName="accountNumber"
+                    [required]="true" [maxlength]="32">
+                </app-input>
+                @if ((accountNumber.dirty || accountNumber.touched) && (accountNumber.errors?.['required'] ||
+                accountNumber.errors?.['pattern'])) {
+                <span class="error"> * Field required (Only numbers are allowed) </span>
+                }
+
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-select label="Tipo de Cuenta:" placeholder="Tipo de Cuenta" formControlName="accountType"
+                    [required]="true" [data]="accountTypeList">
+                </app-select>
+                @if ((accountType.dirty || accountType.touched) && accountType.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Saldo Inicial:" placeholder="Saldo Inicial" formControlName="balance"
+                    [required]="true" [maxlength]="18" [type]="'number'">
+                </app-input>
+                @if ((balance.dirty || balance.touched) && balance.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+                @if ((balance.dirty || balance.touched) && balance.errors?.['pattern']) {
+                <span class="error">* Maximum 2 decimal places allowed</span>
+                }
+            </div>
+        </div>
+
+        <br />
+        <div class="btn-container">
+            <button (click)="onSubmit()" class="btn btn-primary">Aceptar</button>
+            <button (click)="onCancel()" class="btn btn-secondary">Cancelar</button>
+        </div>
+        <br>
+    </form>
+</div>

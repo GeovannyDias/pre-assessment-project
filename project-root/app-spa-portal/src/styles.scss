@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@use './assets/scss/variables' as *;
+@use './assets/scss/main.scss' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body {
+    font-family: 'Prelo', 'Times New Roman', Times, serif;
+    background-color: $color-background;
+}
+
+label {
+    color: $color-dark;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* --- Variables de Estilo --- */
+:root {
+    --sidebar-width: 240px;
+    /* Un azul oscuro/gris para el fondo */
+    --sidebar-color: #ffffff;
+    /* Gris claro para el texto */
+    --text-color: #34495e;
+    /* Azul vibrante para el elemento activo */
+    --active-color: #f3f4f6;
+    /* Un tono más oscuro para el hover */
+    --hover-color: #f3f4f6;
+    --background-color: #ffffff;
+}

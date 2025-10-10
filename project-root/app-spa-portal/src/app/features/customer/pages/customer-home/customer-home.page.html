@@ -1,0 +1,25 @@
+<div class="customer-page">
+    <div class="header">
+        <h1>Clientes</h1>
+    </div>
+    <div class="search-container">
+        <app-input [placeholder]="'Buscar'" (input)="onSearchInput($event)"></app-input>
+        <app-button [label]="'+ Nuevo'" [variant]="'primary'" [size]="'md'" (clicked)="openModal()"></app-button>
+    </div>
+    <div class="table-container">
+        @if (filteredCustomers.length > 0) {
+        <app-table [columns]="columns" [data]="filteredCustomers" (editRow)="onEditRow($event)"
+            (deleteRow)="onDeleteRow($event)" [actionColumnWidth]="'120px'" [showActionsColumn]="true"
+            [showEditButon]="true" [showDeleteButon]="true"></app-table>
+        } @else {
+        <p class="no-data">No existe datos para mostrar.</p>
+        }
+    </div>
+</div>
+
+@if (isModalOpen) {
+<app-modal [title]="'Nuevo Cliente'" [isOpen]="isModalOpen" (closed)="onModalClosed()" (opened)="onModalOpened()"
+    [closeOnBackdropClick]="false">
+    <app-customer-form [customer]="selectedCustomer" [isEdit]="isEditMode" (submitted)="onFormSubmitted($event)"></app-customer-form>
+</app-modal>
+}

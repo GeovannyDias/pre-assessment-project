@@ -1,0 +1,74 @@
+<div class="container">
+    <form [formGroup]="formTransaction" class="form-group">
+
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-select label="Cliente:" placeholder="Seleccione Cliente" (input)="onCustomerSelected($event)"
+                    [required]="true" [data]="customerList">
+                </app-select>
+                @if (customerId.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+            <div class="grid-12 grid-xs-6">
+                <app-select label="Cuenta:" placeholder="Seleccione Cuenta" formControlName="accountId"
+                    [required]="true" [data]="accountList" (input)="onAccountSelected($event)">
+                </app-select>
+                @if ((accountId.dirty || accountId.touched) && accountId.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-select label="Tipo de Transacción:" placeholder="Tipo de Transacción" formControlName="type"
+                    [required]="true" [data]="transactionTypeList" (input)="onDescriptionTypeInput($event)">
+                </app-select>
+                @if ((type.dirty || type.touched) && type.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Monto:" placeholder="Monto" formControlName="amount" [required]="true"
+                    [maxlength]="50" [type]="'number'" (input)="onDescriptionAmountInput()">
+                </app-input>
+                @if ((amount.dirty || amount.touched) && amount.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+                @if ((amount.dirty || amount.touched) && amount.errors?.['pattern']) {
+                <span class="error">* Maximum 2 decimal places allowed (positive number)</span>
+                }
+                @if ((amount.dirty || amount.touched) && amount.errors?.['min']) {
+                <span class="error">* Amount must be greater than 0</span>
+                }
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Descripción:" placeholder="Descripción" formControlName="description"
+                    [required]="true" [maxlength]="150">
+                </app-input>
+                @if ((description.dirty || description.touched) && description.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+            <div class="grid-12 grid-xs-6">
+                <app-input label="Saldo Disponible:" placeholder="Saldo Disponible" [required]="true"
+                    [isDisabled]="true" [field]="balance.value">
+                </app-input>
+                @if ((balance.dirty || balance.touched) && balance.errors?.['required']) {
+                <span class="error"> * Field required </span>
+                }
+            </div>
+        </div>
+
+        <br />
+        <div class="btn-container">
+            <button (click)="onSubmit()" class="btn btn-primary">Aceptar</button>
+            <button (click)="onCancel()" class="btn btn-secondary">Cancelar</button>
+        </div>
+        <br>
+    </form>
+</div>

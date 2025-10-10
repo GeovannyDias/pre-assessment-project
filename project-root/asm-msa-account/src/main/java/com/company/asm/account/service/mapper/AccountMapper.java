@@ -3,7 +3,9 @@ package com.company.asm.account.service.mapper;
 import com.company.asm.account.api.model.AccountInput;
 import com.company.asm.account.api.model.AccountOutput;
 import com.company.asm.account.api.model.AccountPatchInput;
+import com.company.asm.account.api.model.CustomerSummary;
 import com.company.asm.account.domain.Account;
+import com.company.asm.account.domain.Customer;
 
 import org.mapstruct.*;
 
@@ -30,6 +32,7 @@ public interface AccountMapper {
 
     @Mapping(target = "accountType", qualifiedByName = "fromAccountType")
     @Mapping(target = "status", expression = "java(Boolean.TRUE.equals(account.getStatus()) ? AccountOutput.StatusEnum.NUMBER_1 : AccountOutput.StatusEnum.NUMBER_0)")
+    @Mapping(source = "account.customer", target = "customer")
     AccountOutput toOutput(Account account);
 
     List<AccountOutput> toDtoList(List<Account> accounts);
@@ -45,4 +48,6 @@ public interface AccountMapper {
     @Mapping(target = "updatedAt", ignore = true)
     @Mapping(target = "status", expression = "java(source.getStatus() != null && AccountInput.StatusEnum.NUMBER_1.equals(source.getStatus()))")
     void updateEntity(@MappingTarget Account target, AccountInput source);
+
+    CustomerSummary toCustomerSummary(Customer customer);
 }

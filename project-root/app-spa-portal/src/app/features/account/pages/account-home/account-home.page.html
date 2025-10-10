@@ -1,0 +1,26 @@
+<div class="account-page">
+    <div class="header">
+        <h1>Cuentas</h1>
+    </div>
+    <div class="search-container">
+        <app-input [placeholder]="'Buscar'" (input)="onSearchInput($event)"></app-input>
+        <app-button [label]="'+ Nuevo'" [variant]="'primary'" [size]="'md'" (clicked)="openModal()"></app-button>
+    </div>
+    <div class="table-container">
+        @if (filteredAccounts.length > 0) {
+        <app-table [columns]="columns" [data]="filteredAccounts" (editRow)="onEditRow($event)"
+            (deleteRow)="onDeleteRow($event)" [actionColumnWidth]="'120px'" [showActionsColumn]="true"
+            [showEditButon]="true" [showDeleteButon]="true"></app-table>
+        } @else {
+        <p class="no-data">No existe datos para mostrar.</p>
+        }
+    </div>
+</div>
+
+@if (isModalOpen) {
+<app-modal [title]="'Nueva Cuenta'" [isOpen]="isModalOpen" (closed)="onModalClosed()" (opened)="onModalOpened()"
+    [closeOnBackdropClick]="false">
+    <app-account-form [account]="selectedAccount" [isEdit]="isEditMode"
+        (submitted)="onFormSubmitted($event)"></app-account-form>
+</app-modal>
+}

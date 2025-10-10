@@ -63,4 +63,9 @@ public class Account {
             status = true;
         }
     }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CUSTOMER_ID", insertable = false, updatable = false)
+    private Customer customer;
+
 }

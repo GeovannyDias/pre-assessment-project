@@ -1,0 +1,10 @@
+<div class="select-wrapper">
+    <label for="idSelect">{{label}}</label>
+    <select name="select" id="idSelect" [(ngModel)]="field" (ngModelChange)="onChangeFn($event)" (blur)="onTouchedFn()"
+        [disabled]="isDisabled" [required]="required">
+        <option value="" hidden disabled>{{placeholder}}</option>
+        @for (item of data; track $index) {
+        <option [value]="item.value">{{item.label}}</option>
+        }
+    </select>
+</div>
