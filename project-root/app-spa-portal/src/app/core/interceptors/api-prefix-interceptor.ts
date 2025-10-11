@@ -1,5 +1,5 @@
 import { HttpErrorResponse, HttpEvent, HttpHandlerFn, HttpInterceptorFn, HttpRequest } from '@angular/common/http';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { SERVICE_URL_ENDPOINTS } from '../config/service-url-endpoints';
 import { catchError, Observable, throwError } from 'rxjs';
 

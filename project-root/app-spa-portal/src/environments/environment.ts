@@ -1,5 +1,5 @@
 export const environment = {
-    production: true,
+    production: false,
     server: {
         apiGatewayUrl: 'http://localhost:8081',
         serverUrl: 'http://<server>:<port>',
