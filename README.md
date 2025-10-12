@@ -22,19 +22,19 @@ Solución basada en microservicios para la gestión de clientes, cuentas y movim
 
 La solución sigue una arquitectura orientada a microservicios con separación de responsabilidades y persistencia independiente por servicio.
 
-![alt text](01.Diagrams-Diagrama-General.jpg)
+![01 Diagrams-Diagrama-General](https://github.com/user-attachments/assets/ecc6157d-930d-4a7e-835b-56ff62c47e6a)
 
 ## Diagrama de Arquitectura de Microservicios
 
-![alt text](02.Diagrams-Diagrama-Arquitectura.jpg)
+![02 Diagrams-Diagrama-Arquitectura](https://github.com/user-attachments/assets/e553050a-66db-414d-bd0d-8d4680b8a8dc)
 
 ## Diagrama de Despliegue Docker
 
-![alt text](03.Diagrams-Diagrama-Despliegue-Docker.jpg)
+![03 Diagrams-Diagrama-Despliegue-Docker](https://github.com/user-attachments/assets/62a22504-4704-4254-a764-ede36fdc81cb)
 
 ## Base de Datos Relacional - MER
 
-![alt text](Diagram_BDD-1.png)
+<img width="1316" height="721" alt="Diagram_BDD" src="https://github.com/user-attachments/assets/c96af804-1386-4c03-a767-0c4fa55e027a" />
 
 * *https://dbdiagram.io/d/68d8a4a1d2b621e42237b5b2*
 
