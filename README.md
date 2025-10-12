@@ -1,4 +1,5 @@
-# Documentación Técnica - Prueba de Arquitectura de Microservicios
+# Documentación Técnica 
+## Evaluación Arquitectura de Microservicios
 
 ## Resumen del Proyecto
 
@@ -10,15 +11,12 @@ Este proyecto implementa una solución basada en arquitectura de microservicios 
 - Pruebas unitarias implementadas tanto en el backend como en el frontend.
 - Base de datos relacional gestionada con MariaDB.
 - Documentación OpenAPI (Swagger) incluida para cada microservicio.
-- Se simula autenticación mediante un microservicio de identidad.
 
 ---
 
 # Arquitectura de Microservicios
 
 Solución basada en microservicios para la gestión de clientes, cuentas y movimientos financieros. La arquitectura sigue principios de diseño desacoplado, buenas prácticas de desarrollo, y está totalmente contenida en Docker.
-
----
 
 ## Diagrama de Arquitectura General
 
