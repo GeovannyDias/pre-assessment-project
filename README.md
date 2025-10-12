@@ -52,7 +52,7 @@ La solución sigue una arquitectura orientada a microservicios con separación d
 | `app-spa-portal`      | Frontend SPA desarrollado en Angular 20                                |
 | `mariadb`             | Base de datos relacional, persistencia general para simular la solución        |
 
-# Estructura del proyecto (Simulación Cluster)
+# Estructura del proyecto (Cluster Simulation)
 
 ```
 project-root/
