@@ -178,6 +178,7 @@ it('should display user name correctly', () => {
 | Servicio                | `example.service.ts`             |
 | Directiva               | `example.directive.ts`           |
 | Pipe                    | `example.pipe.ts`                |
+| Constante               | `example.const.ts`               |
 
 ### ✅ Buenas prácticas con Jest
 

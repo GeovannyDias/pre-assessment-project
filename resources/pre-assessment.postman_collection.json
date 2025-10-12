@@ -1,0 +1,3903 @@
+{
+	"info": {
+		"_postman_id": "f0a87333-7d4c-41d6-b277-475268b6445c",
+		"name": "pre-assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20062609",
+		"_collection_link": "https://cadena-valor.postman.co/workspace/Evaluation-BP~8a707a16-ce92-42ae-b5aa-6d74cecd952c/collection/20062609-f0a87333-7d4c-41d6-b277-475268b6445c?action=share&source=collection_link&creator=20062609"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-customer-service}}/api/customers",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-customer-service}}",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "customers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:29:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idCustomer\": \"0cebdf23-14f5-4a0f-bcbe-10429419ec85\",\n        \"firstName\": \"Alejandra\",\n        \"lastName\": \"Enriquez\",\n        \"identification\": \"9123456789\",\n        \"address\": \"Amazonas y Pereira\",\n        \"phone\": \"0987654321\",\n        \"createdAt\": \"2025-09-30T00:23:25Z\",\n        \"updatedAt\": \"2025-09-30T00:25:23Z\"\n    },\n    {\n        \"idCustomer\": \"313436a6-97ba-49d5-bf55-85d3cf00c10b\",\n        \"firstName\": \"Carlos\",\n        \"lastName\": \"López\",\n        \"identification\": \"1234567890\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T21:37:38Z\",\n        \"updatedAt\": \"2025-09-29T22:54:17Z\"\n    },\n    {\n        \"idCustomer\": \"9b574a64-52cb-45b5-bf3a-998794efd628\",\n        \"firstName\": \"Sofia\",\n        \"lastName\": \"Flores\",\n        \"identification\": \"8123456789\",\n        \"address\": \"Amazonas y Pereira\",\n        \"phone\": \"0987654321\",\n        \"createdAt\": \"2025-09-30T00:22:40Z\",\n        \"updatedAt\": \"2025-09-30T00:22:40Z\"\n    },\n    {\n        \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"firstName\": \"Geovanny\",\n        \"lastName\": \"Dias\",\n        \"identification\": \"0123456789\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T19:46:27Z\",\n        \"updatedAt\": \"2025-09-29T23:43:16Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "customer-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-customer-service}}/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-customer-service}}",
+							"path": [
+								"api",
+								"customer",
+								"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "customer-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customer",
+										"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:17:15 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"firstName\": \"Geovanny\",\n    \"lastName\": \"Dias\",\n    \"identification\": \"0123456789\",\n    \"address\": \"El Condado\",\n    \"phone\": \"0963214569\",\n    \"createdAt\": \"2025-09-29T19:46:27Z\",\n    \"updatedAt\": \"2025-09-29T23:43:16Z\"\n}"
+						},
+						{
+							"name": "customer-by-id-not-found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customer",
+										"a85155dc-0122-4a45-b6ef-1eb5425c2cc1"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:28:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2025-09-30T00:28:27.6346493\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"Cliente no encontrado con ID: a85155dc-0122-4a45-b6ef-1eb5425c2cc1\",\n    \"path\": \"uri=/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "customer-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Estefania\",\r\n    \"lastName\": \"Torres\",\r\n    \"identification\": \"9223456789\",\r\n    \"address\": \"Amazonas y Pereira\",\r\n    \"phone\": \"0987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-customer-service}}/api/customer/create",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-customer-service}}",
+							"path": [
+								"api",
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "customer-created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Sofia\",\r\n    \"lastName\": \"Flores\",\r\n    \"identification\": \"8123456789\",\r\n    \"address\": \"Amazonas y Pereira\",\r\n    \"phone\": \"0987654321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/customer/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customer",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:22:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idCustomer\": \"9b574a64-52cb-45b5-bf3a-998794efd628\",\n    \"firstName\": \"Sofia\",\n    \"lastName\": \"Flores\",\n    \"identification\": \"8123456789\",\n    \"address\": \"Amazonas y Pereira\",\n    \"phone\": \"0987654321\",\n    \"createdAt\": null,\n    \"updatedAt\": null\n}"
+						},
+						{
+							"name": "customers-already-exist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Estefania\",\r\n    \"lastName\": \"Torres\",\r\n    \"identification\": \"9123456789\",\r\n    \"address\": \"Amazonas y Pereira\",\r\n    \"phone\": \"0987654321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/customer/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customer",
+										"create"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:26:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2025-09-30T00:26:28.0171763\",\n    \"status\": 409,\n    \"error\": \"Conflict\",\n    \"message\": \"Ya existe un cliente con esa identificación.\",\n    \"path\": \"uri=/api/customer/create\"\n}"
+						}
+					]
+				},
+				{
+					"name": "customer-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Geovanny\",\r\n    \"lastName\": \"Dias\",\r\n    \"identification\": \"0123456789\",\r\n    \"address\": \"El Condado\",\r\n    \"phone\": \"0963214569\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-customer-service}}/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-customer-service}}",
+							"path": [
+								"api",
+								"customer",
+								"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer-partial-update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Alejandra\",\r\n    \"lastName\": \"Enriquez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-customer-service}}/api/customer/0cebdf23-14f5-4a0f-bcbe-10429419ec85",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-customer-service}}",
+							"path": [
+								"api",
+								"customer",
+								"0cebdf23-14f5-4a0f-bcbe-10429419ec85"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "customer-partial-updated",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Alejandra\",\r\n    \"lastName\": \"Enriquez\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/customer/0cebdf23-14f5-4a0f-bcbe-10429419ec85",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customer",
+										"0cebdf23-14f5-4a0f-bcbe-10429419ec85"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:25:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idCustomer\": \"0cebdf23-14f5-4a0f-bcbe-10429419ec85\",\n    \"firstName\": \"Alejandra\",\n    \"lastName\": \"Enriquez\",\n    \"identification\": \"9123456789\",\n    \"address\": \"Amazonas y Pereira\",\n    \"phone\": \"0987654321\",\n    \"createdAt\": \"2025-09-30T00:23:25Z\",\n    \"updatedAt\": \"2025-09-30T00:23:25Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "customer-delete-by-id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-customer-service}}/api/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-customer-service}}",
+							"path": [
+								"api",
+								"customer",
+								"acedecc6-c5cb-422a-a55a-5b91eabe2230"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "customers-deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customer",
+										"acedecc6-c5cb-422a-a55a-5b91eabe2230"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:19:57 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"El cliente fue eliminado correctamente.\"\n}"
+						},
+						{
+							"name": "customers-not-found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"customer",
+										"acedecc6-c5cb-422a-a55a-5b91eabe2230"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 05:21:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2025-09-30T00:21:16.5916817\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"Cliente no encontrado con ID: acedecc6-c5cb-422a-a55a-5b91eabe2230\",\n    \"path\": \"uri=/api/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230\"\n}"
+						}
+					]
+				},
+				{
+					"name": "swagger-api-docs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// Swagger UI: http://localhost:8082/api/swagger-ui.html\r\n// API Docs: http://localhost:8082/api/api-docs\r\n\r\n// Swagger UI → http://localhost:8082/api/swagger-ui/index.html\r\n// OpenAPI JSON → http://localhost:8082/api/api-docs\r\n// OpenAPI YAML → http://localhost:8082/api/api-docs.yaml\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/swagger-ui.html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"swagger-ui.html"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-account-service}}/api/accounts",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-account-service}}",
+							"path": [
+								"api",
+								"accounts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "accounts-list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/accounts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"accounts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Oct 2025 18:20:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456789\",\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 150,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:35:25Z\",\n        \"updatedAt\": \"2025-10-08T13:37:06Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    },\n    {\n        \"idAccount\": \"e048c908-9cf3-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456799\",\n        \"accountType\": \"AHORRO\",\n        \"balance\": 200,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:55:26Z\",\n        \"updatedAt\": \"2025-10-08T13:37:23Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "account-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"AHORRO\",\r\n    \"balance\": 0.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-account-service}}/api/account/create",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-account-service}}",
+							"path": [
+								"api",
+								"account",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"AHORRO\",\r\n    \"balance\": 0.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/api/account/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"account",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 23:14:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idAccount\": \"ef1c7ded-2fde-46b4-9089-3d9ca031112d\",\n    \"accountNumber\": \"456899\",\n    \"accountType\": \"AHORRO\",\n    \"balance\": 0,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": null,\n    \"updatedAt\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "account-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-account-service}}/api/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-account-service}}",
+							"path": [
+								"api",
+								"account",
+								"14483fd3-9cf1-11f0-9146-000c294e922d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "account-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"account",
+										"14483fd3-9cf1-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Oct 2025 19:02:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"accountNumber\": \"00456789\",\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 150,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": \"2025-09-30T10:35:25Z\",\n    \"updatedAt\": \"2025-10-08T13:37:06Z\",\n    \"customer\": {\n        \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"firstName\": \"Geovanny\",\n        \"lastName\": \"Dias\",\n        \"identification\": \"0123456789\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T19:46:27Z\",\n        \"updatedAt\": \"2025-09-29T23:43:16Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "account-customer-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-account-service}}/api/accounts/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-account-service}}",
+							"path": [
+								"api",
+								"accounts",
+								"customer",
+								"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "account-customer-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/accounts/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"accounts",
+										"customer",
+										"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Oct 2025 19:13:37 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456789\",\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 150,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:35:25Z\",\n        \"updatedAt\": \"2025-10-08T13:37:06Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    },\n    {\n        \"idAccount\": \"8f70cca7-da99-41bc-be62-a68a3d22c9cc\",\n        \"accountNumber\": \"456899\",\n        \"accountType\": \"AHORRO\",\n        \"balance\": 0,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-10-09T14:12:58Z\",\n        \"updatedAt\": \"2025-10-09T14:12:58Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    },\n    {\n        \"idAccount\": \"e048c908-9cf3-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456799\",\n        \"accountType\": \"AHORRO\",\n        \"balance\": 200,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:55:26Z\",\n        \"updatedAt\": \"2025-10-08T13:37:23Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "account-delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-account-service}}/api/account/ef1c7ded-2fde-46b4-9089-3d9ca031112d",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-account-service}}",
+							"path": [
+								"api",
+								"account",
+								"ef1c7ded-2fde-46b4-9089-3d9ca031112d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/api/account/ef1c7ded-2fde-46b4-9089-3d9ca031112d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"account",
+										"ef1c7ded-2fde-46b4-9089-3d9ca031112d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 23:20:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"La cuenta fue eliminada correctamente.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "account-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\": \"456799\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-account-service}}/api/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-account-service}}",
+							"path": [
+								"api",
+								"account",
+								"14483fd3-9cf1-11f0-9146-000c294e922d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "account-exist",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"456799\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/api/accounts/14483fd3-9cf1-11f0-9146-000c294e922d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"accounts",
+										"14483fd3-9cf1-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 23:22:53 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Ya existe una cuenta con el número: 456799\"\n}"
+						},
+						{
+							"name": "account-update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"456799\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/api/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"account",
+										"14483fd3-9cf1-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 Oct 2025 19:14:54 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"accountNumber\": \"456799\",\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 100,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": \"2025-09-30T10:35:25Z\",\n    \"updatedAt\": \"2025-10-09T14:14:35Z\",\n    \"customer\": {\n        \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"firstName\": \"Geovanny\",\n        \"lastName\": \"Dias\",\n        \"identification\": \"0123456789\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T19:46:27Z\",\n        \"updatedAt\": \"2025-09-29T23:43:16Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "account-path",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-account-service}}/api/accounts/14483fd3-9cf1-11f0-9146-000c294e922d",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-account-service}}",
+							"path": [
+								"api",
+								"accounts",
+								"14483fd3-9cf1-11f0-9146-000c294e922d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "account-updated",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/api/accounts/14483fd3-9cf1-11f0-9146-000c294e922d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"api",
+										"accounts",
+										"14483fd3-9cf1-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 23:24:46 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"accountNumber\": \"456789\",\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 100,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": \"2025-09-30T10:35:25Z\",\n    \"updatedAt\": \"2025-09-30T10:35:25Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "transaction-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-transaction-service}}/api/transaction/465199e1-7638-49d6-ba93-e0fbc245ffe3",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-transaction-service}}",
+							"path": [
+								"api",
+								"transaction",
+								"465199e1-7638-49d6-ba93-e0fbc245ffe3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transaction-by-id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8084/api/transaction/465199e1-7638-49d6-ba93-e0fbc245ffe3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"transaction",
+										"465199e1-7638-49d6-ba93-e0fbc245ffe3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 08 Oct 2025 20:06:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"type\": \"CREDIT\",\n    \"amount\": 50,\n    \"balanceBefore\": 1100,\n    \"balanceAfter\": 1150,\n    \"description\": null,\n    \"createdAt\": \"2025-09-30T22:14:29Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "transactions-filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-transaction-service}}/api/transactions/filter?accountId=14483fd3-9cf1-11f0-9146-000c294e922d&startDate=2025-09-30&endDate=2025-09-30",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-transaction-service}}",
+							"path": [
+								"api",
+								"transactions",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "accountId",
+									"value": "14483fd3-9cf1-11f0-9146-000c294e922d"
+								},
+								{
+									"key": "startDate",
+									"value": "2025-09-30"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-09-30"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transactions-filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8084/api/transactions/filter?accountId=14483fd3-9cf1-11f0-9146-000c294e922d&startDate=2025-09-30&endDate=2025-09-30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"transactions",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "accountId",
+											"value": "14483fd3-9cf1-11f0-9146-000c294e922d"
+										},
+										{
+											"key": "startDate",
+											"value": "2025-09-30"
+										},
+										{
+											"key": "endDate",
+											"value": "2025-09-30"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 03:31:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idTransaction\": \"44733d45-9d41-11f0-9146-000c294e922d\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 1000,\n        \"balanceBefore\": 100,\n        \"balanceAfter\": 1100,\n        \"description\": \"Depósito de 1000\",\n        \"createdAt\": \"2025-09-30T20:09:25Z\"\n    },\n    {\n        \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 50,\n        \"balanceBefore\": 1100,\n        \"balanceAfter\": 1150,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:14:29Z\"\n    },\n    {\n        \"idTransaction\": \"bb9b58f9-fd4c-4f0a-a745-eb8319fdfafd\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"DEBIT\",\n        \"amount\": 500,\n        \"balanceBefore\": 1150,\n        \"balanceAfter\": 650,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:29:28Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "transaction-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"DEBIT\",\r\n    \"amount\": 500.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-transaction-service}}/api/transaction/create",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-transaction-service}}",
+							"path": [
+								"api",
+								"transaction",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREDIT",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"CREDIT\",\r\n    \"amount\": 50.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/api/transaction/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"transaction",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 03:14:28 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"type\": \"CREDIT\",\n    \"amount\": 50,\n    \"balanceBefore\": null,\n    \"balanceAfter\": null,\n    \"description\": null,\n    \"createdAt\": null\n}"
+						},
+						{
+							"name": "ERROR-Sin-Fondos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"DEBIT\",\r\n    \"amount\": 3000.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/api/transaction/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"transaction",
+										"create"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 03:28:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Fondos insuficientes para realizar la transacción\"\n}"
+						},
+						{
+							"name": "DEBIT",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"DEBIT\",\r\n    \"amount\": 500.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/api/transaction/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"transaction",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 03:29:27 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idTransaction\": \"bb9b58f9-fd4c-4f0a-a745-eb8319fdfafd\",\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"type\": \"DEBIT\",\n    \"amount\": 500,\n    \"balanceBefore\": null,\n    \"balanceAfter\": null,\n    \"description\": null,\n    \"createdAt\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server-local}}:{{port-transaction-service}}/api/transactions",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-transaction-service}}",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "transactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8084/api/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Oct 2025 01:21:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idTransaction\": \"44733d45-9d41-11f0-9146-000c294e922d\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 1000,\n        \"balanceBefore\": 100,\n        \"balanceAfter\": 1100,\n        \"description\": \"Depósito de 1000\",\n        \"createdAt\": \"2025-09-30T20:09:25Z\"\n    },\n    {\n        \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 50,\n        \"balanceBefore\": 1100,\n        \"balanceAfter\": 1150,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:14:29Z\"\n    },\n    {\n        \"idTransaction\": \"7cdfde25-0fd0-4be1-b277-6920d58623c7\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"DEBIT\",\n        \"amount\": 500,\n        \"balanceBefore\": 650,\n        \"balanceAfter\": 150,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:36:50Z\"\n    },\n    {\n        \"idTransaction\": \"bb9b58f9-fd4c-4f0a-a745-eb8319fdfafd\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"DEBIT\",\n        \"amount\": 500,\n        \"balanceBefore\": 1150,\n        \"balanceAfter\": 650,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:29:28Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "report-transactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Geovanny Dias\",\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"Ahorro\",\r\n    \"accountStatus\": \"Activo\",\r\n    \"transactions\": [\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1300\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"-100\",\r\n            \"balanceAfter\": \"1200\"\r\n        },\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1000\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"300\",\r\n            \"balanceAfter\": \"1300\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server-local}}:{{port-transaction-service}}/api/report/transactions",
+							"host": [
+								"{{server-local}}"
+							],
+							"port": "{{port-transaction-service}}",
+							"path": [
+								"api",
+								"report",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "report-transactions",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customerName\": \"Geovanny Dias\",\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"Ahorro\",\r\n    \"accountStatus\": \"Activo\",\r\n    \"transactions\": [\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1300\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"-100\",\r\n            \"balanceAfter\": \"1200\"\r\n        },\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1000\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"300\",\r\n            \"balanceAfter\": \"1300\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/api/report/transactions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"report",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Oct 2025 21:49:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"message\": \"Reporte generado correctamente\",\n    \"reportBase64\": \"JVBERi0xLjU...\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "identity",
+			"item": [
+				{
+					"name": "users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:8086/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 04:40:18 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"idUser\": \"4171fa69-9d5e-11f0-9146-000c294e922d\",\n        \"username\": \"geodias\",\n        \"passwordHash\": \"SuperSecurePassword123!\",\n        \"roles\": [\n            \"USER\",\n            \"ADMIN\"\n        ],\n        \"customerId\": null,\n        \"createdAt\": \"2025-09-30T23:36:56Z\",\n        \"updatedAt\": \"2025-09-30T23:36:56Z\"\n    },\n    {\n        \"idUser\": \"86992e6d-9d5e-11f0-9146-000c294e922d\",\n        \"username\": \"sofiamartinez\",\n        \"passwordHash\": \"SuperContraseñaSegura!\",\n        \"roles\": [\n            \"USER\"\n        ],\n        \"customerId\": \"0cebdf23-14f5-4a0f-bcbe-10429419ec85\",\n        \"createdAt\": \"2025-09-30T23:38:52Z\",\n        \"updatedAt\": \"2025-09-30T23:38:52Z\"\n    },\n    {\n        \"idUser\": \"f92ae8b2-13d4-4344-be0e-d057640a8e9c\",\n        \"username\": \"geodias1\",\n        \"passwordHash\": \"geo\",\n        \"roles\": [\n            \"ADMIN\"\n        ],\n        \"customerId\": null,\n        \"createdAt\": \"2025-09-30T23:40:03Z\",\n        \"updatedAt\": \"2025-09-30T23:40:03Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "user-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"geodias1\",\r\n    \"passwordHash\": \"geo\",\r\n    \"roles\": [\r\n        \"ADMIN\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"geodias1\",\r\n    \"passwordHash\": \"geo\",\r\n    \"roles\": [\r\n        \"ADMIN\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/api/user/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"api",
+										"user",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 04:40:02 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUser\": \"f92ae8b2-13d4-4344-be0e-d057640a8e9c\",\n    \"username\": \"geodias1\",\n    \"passwordHash\": \"geo\",\n    \"roles\": [\n        \"ADMIN\"\n    ],\n    \"customerId\": null,\n    \"createdAt\": null,\n    \"updatedAt\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "user-by-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/api/user/4171fa69-9d5e-11f0-9146-000c294e922d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"user",
+								"4171fa69-9d5e-11f0-9146-000c294e922d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8086/api/user/4171fa69-9d5e-11f0-9146-000c294e922d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"api",
+										"user",
+										"4171fa69-9d5e-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 04:42:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUser\": \"4171fa69-9d5e-11f0-9146-000c294e922d\",\n    \"username\": \"geodias\",\n    \"passwordHash\": \"SuperSecurePassword123!\",\n    \"roles\": [\n        \"USER\",\n        \"ADMIN\"\n    ],\n    \"customerId\": null,\n    \"createdAt\": \"2025-09-30T23:36:56Z\",\n    \"updatedAt\": \"2025-09-30T23:36:56Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "identity-login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"geodias1\",\r\n  \"username\": \"geo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/api/identity/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"api",
+								"identity",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "simulation-auth-token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"password\": \"geodias1\",\r\n  \"username\": \"geo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8086/api/identity/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8086",
+									"path": [
+										"api",
+										"identity",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Oct 2025 04:43:56 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "api-gateway-request",
+			"item": [
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "customers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/customers",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"customers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "customers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8082/api/customers",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:29:24 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"idCustomer\": \"0cebdf23-14f5-4a0f-bcbe-10429419ec85\",\n        \"firstName\": \"Alejandra\",\n        \"lastName\": \"Enriquez\",\n        \"identification\": \"9123456789\",\n        \"address\": \"Amazonas y Pereira\",\n        \"phone\": \"0987654321\",\n        \"createdAt\": \"2025-09-30T00:23:25Z\",\n        \"updatedAt\": \"2025-09-30T00:25:23Z\"\n    },\n    {\n        \"idCustomer\": \"313436a6-97ba-49d5-bf55-85d3cf00c10b\",\n        \"firstName\": \"Carlos\",\n        \"lastName\": \"López\",\n        \"identification\": \"1234567890\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T21:37:38Z\",\n        \"updatedAt\": \"2025-09-29T22:54:17Z\"\n    },\n    {\n        \"idCustomer\": \"9b574a64-52cb-45b5-bf3a-998794efd628\",\n        \"firstName\": \"Sofia\",\n        \"lastName\": \"Flores\",\n        \"identification\": \"8123456789\",\n        \"address\": \"Amazonas y Pereira\",\n        \"phone\": \"0987654321\",\n        \"createdAt\": \"2025-09-30T00:22:40Z\",\n        \"updatedAt\": \"2025-09-30T00:22:40Z\"\n    },\n    {\n        \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"firstName\": \"Geovanny\",\n        \"lastName\": \"Dias\",\n        \"identification\": \"0123456789\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T19:46:27Z\",\n        \"updatedAt\": \"2025-09-29T23:43:16Z\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "customer-by-id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"customer",
+										"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "customer-by-id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8082/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customer",
+												"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:17:15 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"firstName\": \"Geovanny\",\n    \"lastName\": \"Dias\",\n    \"identification\": \"0123456789\",\n    \"address\": \"El Condado\",\n    \"phone\": \"0963214569\",\n    \"createdAt\": \"2025-09-29T19:46:27Z\",\n    \"updatedAt\": \"2025-09-29T23:43:16Z\"\n}"
+								},
+								{
+									"name": "customer-by-id-not-found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8082/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customer",
+												"a85155dc-0122-4a45-b6ef-1eb5425c2cc1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:28:27 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2025-09-30T00:28:27.6346493\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"Cliente no encontrado con ID: a85155dc-0122-4a45-b6ef-1eb5425c2cc1\",\n    \"path\": \"uri=/api/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc1\"\n}"
+								}
+							]
+						},
+						{
+							"name": "customer-create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Estefania\",\r\n    \"lastName\": \"Torres\",\r\n    \"identification\": \"9123456789\",\r\n    \"address\": \"Amazonas y Pereira\",\r\n    \"phone\": \"0987654321\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/customer/create",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"customer",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "customer-created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Sofia\",\r\n    \"lastName\": \"Flores\",\r\n    \"identification\": \"8123456789\",\r\n    \"address\": \"Amazonas y Pereira\",\r\n    \"phone\": \"0987654321\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8082/api/customer/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customer",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:22:39 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idCustomer\": \"9b574a64-52cb-45b5-bf3a-998794efd628\",\n    \"firstName\": \"Sofia\",\n    \"lastName\": \"Flores\",\n    \"identification\": \"8123456789\",\n    \"address\": \"Amazonas y Pereira\",\n    \"phone\": \"0987654321\",\n    \"createdAt\": null,\n    \"updatedAt\": null\n}"
+								},
+								{
+									"name": "customers-already-exist",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Estefania\",\r\n    \"lastName\": \"Torres\",\r\n    \"identification\": \"9123456789\",\r\n    \"address\": \"Amazonas y Pereira\",\r\n    \"phone\": \"0987654321\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8082/api/customer/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customer",
+												"create"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:26:28 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2025-09-30T00:26:28.0171763\",\n    \"status\": 409,\n    \"error\": \"Conflict\",\n    \"message\": \"Ya existe un cliente con esa identificación.\",\n    \"path\": \"uri=/api/customer/create\"\n}"
+								}
+							]
+						},
+						{
+							"name": "customer-update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCustomer\": \"0cebdf23-14f5-4a0f-bcbe-10429419ec85\",\r\n    \"firstName\": \"Alejandra\",\r\n    \"lastName\": \"Enriquez\",\r\n    \"identification\": \"9123456789\",\r\n    \"address\": \"Amazonas y Pereira\",\r\n    \"phone\": \"0987654321\",\r\n    \"createdAt\": \"2025-09-30T00:23:25Z\",\r\n    \"updatedAt\": \"2025-09-30T00:25:23Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/customer/0cebdf23-14f5-4a0f-bcbe-10429419ec85",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"customer",
+										"0cebdf23-14f5-4a0f-bcbe-10429419ec85"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "customer-partial-update",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Alejandra\",\r\n    \"lastName\": \"Enriquez\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/customer/0cebdf23-14f5-4a0f-bcbe-10429419ec85",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"customer",
+										"0cebdf23-14f5-4a0f-bcbe-10429419ec85"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "customer-partial-updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Alejandra\",\r\n    \"lastName\": \"Enriquez\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8082/api/customer/0cebdf23-14f5-4a0f-bcbe-10429419ec85",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customer",
+												"0cebdf23-14f5-4a0f-bcbe-10429419ec85"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:25:23 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idCustomer\": \"0cebdf23-14f5-4a0f-bcbe-10429419ec85\",\n    \"firstName\": \"Alejandra\",\n    \"lastName\": \"Enriquez\",\n    \"identification\": \"9123456789\",\n    \"address\": \"Amazonas y Pereira\",\n    \"phone\": \"0987654321\",\n    \"createdAt\": \"2025-09-30T00:23:25Z\",\n    \"updatedAt\": \"2025-09-30T00:23:25Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "customer-delete-by-id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"customer",
+										"acedecc6-c5cb-422a-a55a-5b91eabe2230"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "customers-deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8082/api/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customer",
+												"acedecc6-c5cb-422a-a55a-5b91eabe2230"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:19:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"El cliente fue eliminado correctamente.\"\n}"
+								},
+								{
+									"name": "customers-not-found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8082/api/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8082",
+											"path": [
+												"api",
+												"customer",
+												"acedecc6-c5cb-422a-a55a-5b91eabe2230"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 05:21:16 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2025-09-30T00:21:16.5916817\",\n    \"status\": 404,\n    \"error\": \"Not Found\",\n    \"message\": \"Cliente no encontrado con ID: acedecc6-c5cb-422a-a55a-5b91eabe2230\",\n    \"path\": \"uri=/api/customer/acedecc6-c5cb-422a-a55a-5b91eabe2230\"\n}"
+								}
+							]
+						},
+						{
+							"name": "swagger-api-docs",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "// Swagger UI: http://localhost:8082/api/swagger-ui.html\r\n// API Docs: http://localhost:8082/api/api-docs\r\n\r\n// Swagger UI → http://localhost:8082/api/swagger-ui/index.html\r\n// OpenAPI JSON → http://localhost:8082/api/api-docs\r\n// OpenAPI YAML → http://localhost:8082/api/api-docs.yaml\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8082/api/swagger-ui.html",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"swagger-ui.html"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "account",
+					"item": [
+						{
+							"name": "accounts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/accounts",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"accounts"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "accounts-list",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8083/api/accounts",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"accounts"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Oct 2025 18:20:08 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456789\",\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 150,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:35:25Z\",\n        \"updatedAt\": \"2025-10-08T13:37:06Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    },\n    {\n        \"idAccount\": \"e048c908-9cf3-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456799\",\n        \"accountType\": \"AHORRO\",\n        \"balance\": 200,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:55:26Z\",\n        \"updatedAt\": \"2025-10-08T13:37:23Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "account-create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"AHORRO\",\r\n    \"balance\": 0.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/account/create",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"account",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"AHORRO\",\r\n    \"balance\": 0.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8083/api/account/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"account",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 23:14:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idAccount\": \"ef1c7ded-2fde-46b4-9089-3d9ca031112d\",\n    \"accountNumber\": \"456899\",\n    \"accountType\": \"AHORRO\",\n    \"balance\": 0,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": null,\n    \"updatedAt\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "account-by-id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"account",
+										"14483fd3-9cf1-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "account-by-id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8083/api/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"account",
+												"14483fd3-9cf1-11f0-9146-000c294e922d"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Oct 2025 19:02:35 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"accountNumber\": \"00456789\",\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 150,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": \"2025-09-30T10:35:25Z\",\n    \"updatedAt\": \"2025-10-08T13:37:06Z\",\n    \"customer\": {\n        \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"firstName\": \"Geovanny\",\n        \"lastName\": \"Dias\",\n        \"identification\": \"0123456789\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T19:46:27Z\",\n        \"updatedAt\": \"2025-09-29T23:43:16Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "account-customer-by-id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/accounts/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"accounts",
+										"customer",
+										"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "account-customer-by-id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8083/api/accounts/customer/a85155dc-0122-4a45-b6ef-1eb5425c2cc7",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"accounts",
+												"customer",
+												"a85155dc-0122-4a45-b6ef-1eb5425c2cc7"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Oct 2025 19:13:37 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456789\",\n        \"accountType\": \"CORRIENTE\",\n        \"balance\": 150,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:35:25Z\",\n        \"updatedAt\": \"2025-10-08T13:37:06Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    },\n    {\n        \"idAccount\": \"8f70cca7-da99-41bc-be62-a68a3d22c9cc\",\n        \"accountNumber\": \"456899\",\n        \"accountType\": \"AHORRO\",\n        \"balance\": 0,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-10-09T14:12:58Z\",\n        \"updatedAt\": \"2025-10-09T14:12:58Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    },\n    {\n        \"idAccount\": \"e048c908-9cf3-11f0-9146-000c294e922d\",\n        \"accountNumber\": \"00456799\",\n        \"accountType\": \"AHORRO\",\n        \"balance\": 200,\n        \"status\": 1,\n        \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"createdAt\": \"2025-09-30T10:55:26Z\",\n        \"updatedAt\": \"2025-10-08T13:37:23Z\",\n        \"customer\": {\n            \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n            \"firstName\": \"Geovanny\",\n            \"lastName\": \"Dias\",\n            \"identification\": \"0123456789\",\n            \"address\": \"El Condado\",\n            \"phone\": \"0963214569\",\n            \"createdAt\": \"2025-09-29T19:46:27Z\",\n            \"updatedAt\": \"2025-09-29T23:43:16Z\"\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "account-delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/account/ef1c7ded-2fde-46b4-9089-3d9ca031112d",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"account",
+										"ef1c7ded-2fde-46b4-9089-3d9ca031112d"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8083/api/account/ef1c7ded-2fde-46b4-9089-3d9ca031112d",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"account",
+												"ef1c7ded-2fde-46b4-9089-3d9ca031112d"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 23:20:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"La cuenta fue eliminada correctamente.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "account-update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountNumber\": \"456799\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"account",
+										"14483fd3-9cf1-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "account-exist",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountNumber\": \"456799\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8083/api/accounts/14483fd3-9cf1-11f0-9146-000c294e922d",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"accounts",
+												"14483fd3-9cf1-11f0-9146-000c294e922d"
+											]
+										}
+									},
+									"status": "Conflict",
+									"code": 409,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 23:22:53 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Ya existe una cuenta con el número: 456799\"\n}"
+								},
+								{
+									"name": "account-update",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountNumber\": \"456799\",\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00,\r\n    \"status\": 1,\r\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8083/api/account/14483fd3-9cf1-11f0-9146-000c294e922d",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"account",
+												"14483fd3-9cf1-11f0-9146-000c294e922d"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 09 Oct 2025 19:14:54 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"accountNumber\": \"456799\",\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 100,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": \"2025-09-30T10:35:25Z\",\n    \"updatedAt\": \"2025-10-09T14:14:35Z\",\n    \"customer\": {\n        \"idCustomer\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n        \"firstName\": \"Geovanny\",\n        \"lastName\": \"Dias\",\n        \"identification\": \"0123456789\",\n        \"address\": \"El Condado\",\n        \"phone\": \"0963214569\",\n        \"createdAt\": \"2025-09-29T19:46:27Z\",\n        \"updatedAt\": \"2025-09-29T23:43:16Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "account-path",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/accounts/14483fd3-9cf1-11f0-9146-000c294e922d",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"accounts",
+										"14483fd3-9cf1-11f0-9146-000c294e922d"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "account-updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountType\": \"CORRIENTE\",\r\n    \"balance\": 100.00\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8083/api/accounts/14483fd3-9cf1-11f0-9146-000c294e922d",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8083",
+											"path": [
+												"api",
+												"accounts",
+												"14483fd3-9cf1-11f0-9146-000c294e922d"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 30 Sep 2025 23:24:46 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idAccount\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"accountNumber\": \"456789\",\n    \"accountType\": \"CORRIENTE\",\n    \"balance\": 100,\n    \"status\": 1,\n    \"customerId\": \"a85155dc-0122-4a45-b6ef-1eb5425c2cc7\",\n    \"createdAt\": \"2025-09-30T10:35:25Z\",\n    \"updatedAt\": \"2025-09-30T10:35:25Z\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "transaction",
+					"item": [
+						{
+							"name": "transaction-by-id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/transaction/465199e1-7638-49d6-ba93-e0fbc245ffe3",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"transaction",
+										"465199e1-7638-49d6-ba93-e0fbc245ffe3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "transaction-by-id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8084/api/transaction/465199e1-7638-49d6-ba93-e0fbc245ffe3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"transaction",
+												"465199e1-7638-49d6-ba93-e0fbc245ffe3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 08 Oct 2025 20:06:27 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"type\": \"CREDIT\",\n    \"amount\": 50,\n    \"balanceBefore\": 1100,\n    \"balanceAfter\": 1150,\n    \"description\": null,\n    \"createdAt\": \"2025-09-30T22:14:29Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "transactions-filter",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/transactions/filter?accountId=14483fd3-9cf1-11f0-9146-000c294e922d&startDate=2025-09-30&endDate=2025-09-30",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"transactions",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "accountId",
+											"value": "14483fd3-9cf1-11f0-9146-000c294e922d"
+										},
+										{
+											"key": "startDate",
+											"value": "2025-09-30"
+										},
+										{
+											"key": "endDate",
+											"value": "2025-09-30"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "transactions-filter",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8084/api/transactions/filter?accountId=14483fd3-9cf1-11f0-9146-000c294e922d&startDate=2025-09-30&endDate=2025-09-30",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"transactions",
+												"filter"
+											],
+											"query": [
+												{
+													"key": "accountId",
+													"value": "14483fd3-9cf1-11f0-9146-000c294e922d"
+												},
+												{
+													"key": "startDate",
+													"value": "2025-09-30"
+												},
+												{
+													"key": "endDate",
+													"value": "2025-09-30"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 01 Oct 2025 03:31:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"idTransaction\": \"44733d45-9d41-11f0-9146-000c294e922d\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 1000,\n        \"balanceBefore\": 100,\n        \"balanceAfter\": 1100,\n        \"description\": \"Depósito de 1000\",\n        \"createdAt\": \"2025-09-30T20:09:25Z\"\n    },\n    {\n        \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 50,\n        \"balanceBefore\": 1100,\n        \"balanceAfter\": 1150,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:14:29Z\"\n    },\n    {\n        \"idTransaction\": \"bb9b58f9-fd4c-4f0a-a745-eb8319fdfafd\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"DEBIT\",\n        \"amount\": 500,\n        \"balanceBefore\": 1150,\n        \"balanceAfter\": 650,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:29:28Z\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "transaction-create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"DEBIT\",\r\n    \"amount\": 500.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/transaction/create",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"transaction",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "CREDIT",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"CREDIT\",\r\n    \"amount\": 50.00\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8084/api/transaction/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"transaction",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 01 Oct 2025 03:14:28 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"type\": \"CREDIT\",\n    \"amount\": 50,\n    \"balanceBefore\": null,\n    \"balanceAfter\": null,\n    \"description\": null,\n    \"createdAt\": null\n}"
+								},
+								{
+									"name": "ERROR-Sin-Fondos",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"DEBIT\",\r\n    \"amount\": 3000.00\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8084/api/transaction/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"transaction",
+												"create"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 01 Oct 2025 03:28:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Fondos insuficientes para realizar la transacción\"\n}"
+								},
+								{
+									"name": "DEBIT",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\r\n    \"type\": \"DEBIT\",\r\n    \"amount\": 500.00\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8084/api/transaction/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"transaction",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 01 Oct 2025 03:29:27 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"idTransaction\": \"bb9b58f9-fd4c-4f0a-a745-eb8319fdfafd\",\n    \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n    \"type\": \"DEBIT\",\n    \"amount\": 500,\n    \"balanceBefore\": null,\n    \"balanceAfter\": null,\n    \"description\": null,\n    \"createdAt\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "transactions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/transactions",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"transactions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "transactions",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8084/api/transactions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"transactions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 10 Oct 2025 01:21:00 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"idTransaction\": \"44733d45-9d41-11f0-9146-000c294e922d\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 1000,\n        \"balanceBefore\": 100,\n        \"balanceAfter\": 1100,\n        \"description\": \"Depósito de 1000\",\n        \"createdAt\": \"2025-09-30T20:09:25Z\"\n    },\n    {\n        \"idTransaction\": \"465199e1-7638-49d6-ba93-e0fbc245ffe3\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"CREDIT\",\n        \"amount\": 50,\n        \"balanceBefore\": 1100,\n        \"balanceAfter\": 1150,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:14:29Z\"\n    },\n    {\n        \"idTransaction\": \"7cdfde25-0fd0-4be1-b277-6920d58623c7\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"DEBIT\",\n        \"amount\": 500,\n        \"balanceBefore\": 650,\n        \"balanceAfter\": 150,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:36:50Z\"\n    },\n    {\n        \"idTransaction\": \"bb9b58f9-fd4c-4f0a-a745-eb8319fdfafd\",\n        \"accountId\": \"14483fd3-9cf1-11f0-9146-000c294e922d\",\n        \"type\": \"DEBIT\",\n        \"amount\": 500,\n        \"balanceBefore\": 1150,\n        \"balanceAfter\": 650,\n        \"description\": null,\n        \"createdAt\": \"2025-09-30T22:29:28Z\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "report-transactions",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customerName\": \"Geovanny Dias\",\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"Ahorro\",\r\n    \"accountStatus\": \"Activo\",\r\n    \"transactions\": [\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1300\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"-100\",\r\n            \"balanceAfter\": \"1200\"\r\n        },\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1000\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"300\",\r\n            \"balanceAfter\": \"1300\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server-api-gateway}}:{{port-api-gateway}}/api/service/report/transactions",
+									"host": [
+										"{{server-api-gateway}}"
+									],
+									"port": "{{port-api-gateway}}",
+									"path": [
+										"api",
+										"service",
+										"report",
+										"transactions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "report-transactions",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"customerName\": \"Geovanny Dias\",\r\n    \"accountNumber\": \"456899\",\r\n    \"accountType\": \"Ahorro\",\r\n    \"accountStatus\": \"Activo\",\r\n    \"transactions\": [\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1300\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"-100\",\r\n            \"balanceAfter\": \"1200\"\r\n        },\r\n        {\r\n            \"date\": \"10/10/2025\",\r\n            \"balanceBefore\": \"1000\",\r\n            \"accountStatus\": \"Activo\",\r\n            \"amount\": \"300\",\r\n            \"balanceAfter\": \"1300\"\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8084/api/report/transactions",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8084",
+											"path": [
+												"api",
+												"report",
+												"transactions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 10 Oct 2025 21:49:52 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"success\",\n    \"message\": \"Reporte generado correctamente\",\n    \"reportBase64\": \"JVBERi0xLjU...\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server-local",
+			"value": ""
+		},
+		{
+			"key": "port-customer-service",
+			"value": ""
+		},
+		{
+			"key": "port-account-service",
+			"value": ""
+		},
+		{
+			"key": "port-transaction-service",
+			"value": ""
+		},
+		{
+			"key": "port-identity-service",
+			"value": "",
+			"disabled": true
+		},
+		{
+			"key": "server-api-gateway",
+			"value": ""
+		},
+		{
+			"key": "port-api-gateway",
+			"value": ""
+		}
+	]
+}
